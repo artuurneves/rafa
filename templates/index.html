@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DrawDown Calculator</title>
-    <link href="{{ url_for('static',filename="css/bootstrap.min.css") }}" rel="stylesheet">
-</head>
-<body>
-    <a href="{{ url_for('ddcalculator') }}">Calculadora</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block content %}
+    <div id="conteudo">
+		<h1>Welcome to Rafa's Easies</h1>
+	</div>
+	<img src="./static/fonts/rafa_g.jpg"
+	 id="foto"
+     alt="Rafa Dorneles"
+	 title="Rafa Dorneles"
+     width="400"
+     height="341">
+{% endblock %}

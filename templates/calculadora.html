@@ -1,18 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>DrawDown Calculator</title>
-    <link href="{{ url_for('static',filename="css/bootstrap.min.css") }}" rel="stylesheet">
-</head>
-<body>
-    <h1>Este é um teste de calculadora</h1>
-    <form name="calculator" method="POST">
-        <label>Please type you current drawdown (em %)</label>
-        <input type="text" name="value">
-        <input type="submit">
-        {{ result }}
-    </form>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block content %}
+    <div id="conteudo">
+
+	   <h1>DrawDown Calculator</h1>
+
+	</div>
+    <form name="calculator" method="POST">
+          <div class="input-container">
+              <label>Please type you current drawdown (in %)</label>
+              <!-- <i class="bi bi-percent"></i> -->
+              <input class="input-field" type="text" name="value">
+              <button type="submit">Calculate</button>
+              {{ result }}
+          </div>
+    </form>
+{% endblock %}
